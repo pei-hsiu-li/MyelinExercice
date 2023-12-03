@@ -1,0 +1,35 @@
+<!-- tools-stat.component.html -->
+
+<div>
+    <h2>Tools Stat</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Visits</th>
+          <th>Registrations</th>
+          <th>Shares</th>
+          <th>Follows</th>
+          <th>Credibility</th>
+          <th>Efficacy</th>
+          <th>Note</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let tool of hasTools">
+          <td>{{ tool.nom }}</td>
+          <td>{{ tool.visites }}</td>
+          <td>{{ tool.entregistrements }}</td>
+          <td>{{ tool.partages }}</td>
+          <td>{{ tool.suivis }}</td>
+          <td>{{ tool.credibilite }}</td>
+          <td>{{ tool.efficacite }}</td>
+          <td>{{ tool.note }}</td>
+          <td><button (click)="seeTool(tool.id)">View Tool</button ></td>
+        </tr>
+      </tbody>
+    </table>
+    <button (click)="goHome()">Home</button>
+  </div>
+  

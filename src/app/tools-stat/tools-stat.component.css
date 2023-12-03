@@ -1,0 +1,48 @@
+/* tools-stat.component.css */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  th {
+    background-color: #f2f2f2;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #f9f9f9; /* Alternate background color for even rows */
+  }
+  
+  tr:nth-child(odd) {
+    background-color: #707070; /* Alternate background color for odd rows */
+  }
+  
+  tr:hover {
+    background-color: rgb(190, 108, 108);
+  }
+  
+  button {
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  /* Additional styles for better readability */
+  h2 {
+    color: #333;
+  }
+  
+  div {
+    margin: 20px;
+  }
+  
+  button {
+    margin-top: 10px;
+  }
+  
