@@ -1,25 +1,25 @@
-// app.module.ts
-
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { ToolsStatComponent } from './tools-stat/tools-stat.component';
 import { SingleToolComponent } from './single-tool/single-tool.component';
 import { CommonModule } from '@angular/common';
-import { appRoutes } from './app.routes';
+import { AppRoutingModule } from './app.routes';
+import { ToolModule } from './tools-stat/tools-stat.module';
 
 
 @NgModule({
     declarations: [
+        AppComponent,
+        ToolsStatComponent,
         SingleToolComponent
     ],
     imports: [
         BrowserModule,
-        AppComponent,
-        ToolsStatComponent,
         CommonModule,
-        RouterModule.forRoot(appRoutes)
+        AppRoutingModule,
+        ToolModule
     ],
+    bootstrap: [AppComponent]
 })
 export class AppModule { }

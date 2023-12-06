@@ -29,11 +29,16 @@ table {
   }
   
   button {
-    padding: 5px 10px;
+    margin-top: 10px;
+    padding: 10px 20px;
     cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
   }
   
-  /* Additional styles for better readability */
   h2 {
     color: #333;
   }
@@ -42,7 +47,4 @@ table {
     margin: 20px;
   }
   
-  button {
-    margin-top: 10px;
-  }
   

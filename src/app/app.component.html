@@ -1,8 +1,13 @@
-
-<div>
-  <h1>Angular app</h1>
+<div class="header">
+  <h1>Angular App</h1>
   <nav>
-    <button (click)="goOutils()">Tous les Outils</button>
+    <button *ngIf="home" (click)="goOutils()">Tous les Outils</button>
+    <button *ngIf="!home" (click)="goHome()">Home</button>
   </nav>
-  <router-outlet></router-outlet>
+  <div class="font-controls">
+    <label>Font Size</label> 
+    <button (click)="increaseFontSize()">A+</button>
+    <button (click)="decreaseFontSize()">A-</button>
+  </div>
 </div>
+<router-outlet></router-outlet>

@@ -1,18 +1,18 @@
-import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { Router, RouterOutlet } from '@angular/router';
+import { Router } from '@angular/router';
+import { ToolModule } from './tools-stat.module';
+import { DataService } from '../data.service';
 
 @Component({
   selector: 'app-tools-stat',
   templateUrl: './tools-stat.component.html',
-  styleUrls: ['./tools-stat.component.css'],
-  imports: [CommonModule, RouterOutlet],
-  standalone: true
+  styleUrls: ['../app.component.css']
 })
 export class ToolsStatComponent {
   hasTools;
+  title = 'tool-stat';
   constructor(
-    public router: Router
+    public router: Router, private dataService: DataService
   ) {
     this.hasTools = [{nom:"Outil numero 1 avec peu de visites", id:"asd12", visites: 1, entregistrements:123, partages:123, suivis:123, credibilite:123,efficacite:123,note:123},
                       {nom:"Outil numero 2", id:"af2jhkhb", visites: 223, entregistrements:223, partages:223, suivis:223, credibilite:2213,efficacite:223,note:223},
@@ -21,6 +21,14 @@ export class ToolsStatComponent {
                       {nom:"Prochain outil", id:"gs54gf",visites: 5, entregistrements:523, partages:523, suivis:523, credibilite:523,efficacite:523,note:523},
                       {nom: "Outil 6", id:"gfsdg54hdf",visites: 62, entregistrements:623, partages:623, suivis:623, credibilite:623,efficacite:623,note:623},
                       {nom:"Dernier outils avec beaucoup de visites et un long titre", id:"fcafasdr32", visites: 105923, entregistrements:723, partages:723, suivis:723, credibilite:723,efficacite:723,note:723}]
+  }
+
+  ngOnInit() {
+    this.dataService.setToolsData(this.hasTools);
+  }
+  
+  getToolById(toolId: string) {
+    return this.hasTools.find(tool => tool.id === toolId);
   }
 
   seeTool(id: any) {

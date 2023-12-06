@@ -1,5 +1,12 @@
 .DS_STORE
 
+## Angular ##
+# compiled output
+
+tmp/
+app/**/*.js
+app/**/*.js.map
+
 /dist/
 /bazel-out
 /integration/bazel/bazel-*
@@ -28,6 +35,7 @@ modules/.settings
 modules/.vscode
 .vimrc
 .nvimrc
+bower_components/
 
 # Don't check in secret files
 *secret.js
@@ -57,3 +65,17 @@ baseline.json
 # Husky
 .husky/_
 aio/content/examples/.DS_Store
+
+# misc
+.sass-cache/
+connect.lock/
+coverage/
+libpeerconnection.log/
+npm-debug.log
+testem.log
+typings/
+.angular/
+
+# e2e
+e2e/*.js
+e2e/*.map

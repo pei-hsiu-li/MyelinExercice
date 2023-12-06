@@ -1,5 +1,31 @@
 <div>
-    <h2>Single Tool</h2>
-    <p>Tool ID: {{ toolID }}</p>
-</div>
-<button (click)="goHome()">Home</button>
+    <h2>Tool detail</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Visits</th>
+          <th>Registrations</th>
+          <th>Shares</th>
+          <th>Follows</th>
+          <th>Credibility</th>
+          <th>Efficacy</th>
+          <th>Note</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>{{ toolData?.nom }}</td>
+          <td>{{ toolData?.visites }}</td>
+          <td>{{ toolData?.entregistrements }}</td>
+          <td>{{ toolData?.partages }}</td>
+          <td>{{ toolData?.suivis }}</td>
+          <td>{{ toolData?.credibilite }}</td>
+          <td>{{ toolData?.efficacite }}</td>
+          <td>{{ toolData?.note }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+<button (click)="goOutils()">Back</button>
